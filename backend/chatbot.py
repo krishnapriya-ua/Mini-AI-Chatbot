@@ -30,6 +30,8 @@ def get_answers(user_input :str) ->str:
     if score >= 80:
         return knowledge_base[idx]['answer']
     else:
+       if not gemini_key: 
+           return 'No Gemini Api key found, only knowledge base questions will answered.'
        model = GoogleGenerativeAI.GenerativeModel("gemini-flash-lite-latest")
        chat = model.start_chat(history=[])
 
@@ -40,9 +42,9 @@ def get_answers(user_input :str) ->str:
             "top_p": 0.95,
             "top_k": 20, 
             "max_output_tokens": 90,
-            }
-        )
+            }  
+        ) 
        return response.text 
-
+ 
  
    
