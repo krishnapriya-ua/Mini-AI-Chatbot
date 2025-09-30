@@ -3,8 +3,8 @@ The chatbot answers professional questions using a small knowledge base. For unm
 
 setup instructions 
 
-1. git clone <github repo>
-   - cd repo
+1. git clone https://github.com/krishnapriya-ua/Mini-AI-Chatbot.git
+   - cd Mini-AI-Chatbot
 
 2.cd frontend
    - npm install
@@ -16,3 +16,13 @@ setup instructions
    - uvicorn main:app --reload
 
 Inorder to get the llm integrated answers , you have to create your gemini API Key and give your real api in .env.example and rename it as .env .
+
+Now try asking questions like  :
+
+How can I improve team productivity?
+How to manage startup funding? or startup funding or remote work ?  to get knowledge base answers .
+
+Now ask 
+Who is the president of India ? to get llm integrated answer.
+
+Happy coding!!
