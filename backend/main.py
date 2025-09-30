@@ -14,10 +14,11 @@ app.add_middleware(
     allow_credentials = True,
     allow_methods = ["*"],
     allow_headers = ["*"]
-)
+) 
 
 
 @app.post('/ask')
 def askquestion(question:Question):
     answer = get_answers(question.input) 
     return{"answer":answer}
+ 
