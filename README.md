@@ -1,5 +1,6 @@
 A simple web-based AI chatbot built with React (frontend) and FastAPI / Python (backend).
 The chatbot answers professional questions using a small knowledge base. For unmatched questions, it can call the Google Gemini LLM if you provide an API key.
+For matching the user's questions with knowledge base, rapidfuzz - (Python dictionary) is used.
 
 setup instructions 
 
@@ -16,6 +17,8 @@ setup instructions
    - uvicorn main:app --reload
 
 Inorder to get the llm integrated answers , you have to create your gemini API Key and give your real api in .env.example and rename it as .env .
+
+
 
 Now try asking questions like  :
 
